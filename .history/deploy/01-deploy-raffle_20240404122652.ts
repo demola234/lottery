@@ -1,5 +1,3 @@
-import { network } from "hardhat";
-
 module.exports = async function ({ getNamedAccounts, deployments }) {
   const { deploy, log } = deployments;
   const { deployer } = await getNamedAccounts();
@@ -8,6 +6,6 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
     from: deployer,
     args: [],
     log: true,
-    waitConfirmations: network.config.gasMultiplier || 1
+    waitConfirmations: 
   });
 };
