@@ -7,7 +7,7 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
   const chainId = network.config.chainId;
 
   if (developmentChains.includes(network.name)) {
-    log("Local Network Detected, Deploying mocks...  ");
+    log("Local Network Detected, Deploying mocks... ");
   }
 
   const raffle = await deploy("Raffle", {

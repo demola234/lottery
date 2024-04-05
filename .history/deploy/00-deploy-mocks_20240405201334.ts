@@ -1,5 +1,5 @@
-import { network } from "hardhat";
 const { developmentChains } = require("../helper_hardhat.config");
+import { network } from "hardhat";
 
 module.exports = async function ({ getNamedAccounts, deployments }) {
   const { deploy, log } = deployments;
@@ -17,4 +17,3 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
     waitConfirmations: network.config.gasMultiplier || 1,
   });
 };
-  

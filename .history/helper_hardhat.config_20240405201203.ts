@@ -9,5 +9,5 @@ const developmemntChains = ["hardhat", "localhost"];
 
 module.exports = {
   networkConfig,
-  developmemntChains,  
+  developmemntChains,
 };

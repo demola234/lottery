@@ -1,5 +1,5 @@
-import { network } from "hardhat";
 const { developmentChains } = require("../helper_hardhat.config");
+import { network } from "hardhat";
 
 module.exports = async function ({ getNamedAccounts, deployments }) {
   const { deploy, log } = deployments;
@@ -7,14 +7,15 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
   const chainId = network.config.chainId;
 
   if (developmentChains.includes(network.name)) {
-    log("Local Network Detected, Deploying mocks...  ");
+      log("Local Network Detected, Deploying mocks...  ");
+      
+      await deploy("VRFCoordinatorV2Mock", {
+          from: deployer,
+          log: true,
+          args: 
+
+      })
   }
 
-  const raffle = await deploy("Raffle", {
-    from: deployer,
-    args: [],
-    log: true,
-    waitConfirmations: network.config.gasMultiplier || 1,
-  });
+ 
 };
-  

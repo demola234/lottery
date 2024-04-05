@@ -1,9 +1,9 @@
 import "@nomicfoundation/hardhat-toolbox";
-import { HardhatUserConfig } from "hardhat/config";
+import { HardhatHelperConfig } from "hardhat/config";
 
 
 
-const config: HardhatUserConfig = {
+const config: HardhatHelperConfig = {
   defaultNetwork: "hardhat",
   solidity: "0.8.24",
   networks: {
